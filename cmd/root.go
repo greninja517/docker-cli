@@ -6,6 +6,8 @@ package cmd
 import (
 	"os"
 
+	"github.com/greninja517/docker-cli/cmd/container"
+	"github.com/greninja517/docker-cli/cmd/image"
 	"github.com/spf13/cobra"
 )
 
@@ -28,6 +30,12 @@ func Execute() {
 	}
 }
 
+// add the sub-commands for the base command
+func addSubCommands() {
+	rootCmd.AddCommand(image.ImageCmd)
+	rootCmd.AddCommand(container.ContainerCmd)
+}
+
 func init() {
 	// Here you will define your flags and configuration settings.
 	// Cobra supports persistent flags, which, if defined here,
@@ -38,4 +46,5 @@ func init() {
 	// Cobra also supports local flags, which will only run
 	// when this action is called directly.
 	// rootCmd.Flags().BoolP("toggle", "t", false, "Help message for toggle")
+	addSubCommands()
 }
