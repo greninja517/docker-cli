@@ -48,7 +48,7 @@ func listContainers(listAll *bool) error {
 	}
 	count := 1
 	for _, container := range containers {
-		fmt.Printf("No: %d\nID: %s\tImage: %s\tStatus: %s\tName: %s\n", count, container.ID, container.Image, container.Status, container.Names[0])
+		fmt.Printf("No: %d\nID: %s\tImage: %s\tStatus: %s\tName: %s\n", count, container.ID[:10], container.Image, container.Status, container.Names[0])
 		count++
 	}
 
