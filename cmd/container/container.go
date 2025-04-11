@@ -19,6 +19,7 @@ var ContainerCmd = &cobra.Command{
 
 func addSubCommands() {
 	ContainerCmd.AddCommand(listCmd)
+	ContainerCmd.AddCommand((rmCmd))
 }
 
 func init() {

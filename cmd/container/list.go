@@ -55,6 +55,7 @@ func listContainers(listAll *bool) error {
 	return nil
 }
 
+// register the flags to this command
 func init() {
 	listCmd.Flags().BoolVarP(&listAll, "all", "a", false, "list all containers in the host machine")
 }

@@ -20,6 +20,7 @@ var ImageCmd = &cobra.Command{
 // register all the underlying image sub-commands
 func addSubCommands() {
 	ImageCmd.AddCommand(listCmd)
+	ImageCmd.AddCommand(rmCmd)
 }
 
 func init() {
